@@ -2,7 +2,7 @@ import React from "react";
 import s from './OnOff.module.css';
 
 type OnOffPropsType = {
-    on: boolean
+    isOn: boolean
 }
 
 export function OnOff(props: OnOffPropsType) {
@@ -12,9 +12,9 @@ export function OnOff(props: OnOffPropsType) {
 
     return (
         <div>
-            <button style={{ backgroundColor: props.on ? "green" : "" }} className={s.button1}>On</button>
-            <button style={{ backgroundColor: props.on ? "" : "red" }} className={s.button1}>Off</button>
-            <button style={{ backgroundColor: props.on ? "green" : "red" }} className={s.button2}/>
+            <button style={{ backgroundColor: props.isOn ? "green" : "" }} className={s.button1}>On</button>
+            <button style={{ backgroundColor: props.isOn ? "" : "red" }} className={s.button1}>Off</button>
+            <button style={{ backgroundColor: props.isOn ? "green" : "red" }} className={s.button2}/>
         </div>
 
     )

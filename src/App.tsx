@@ -22,8 +22,8 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
-            <OnOff on={true} />
-            <OnOff on={false} />
+            <OnOff isOn={true} />
+            <OnOff isOn={false} />
             {/*<OnOff title={"On"} color={"green"}/>*/}
             {/*<OnOff title={"Off"} color={"red"}/>*/}
         </div>
