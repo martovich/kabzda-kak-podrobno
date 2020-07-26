@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
+import {OnOff} from "./components/OnOff/OnOff";
+
 
 type PageTitlePropsType = {
     title: string
@@ -20,6 +22,10 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+            <OnOff on={true} />
+            <OnOff on={false} />
+            {/*<OnOff title={"On"} color={"green"}/>*/}
+            {/*<OnOff title={"Off"} color={"red"}/>*/}
         </div>
     );
 }
