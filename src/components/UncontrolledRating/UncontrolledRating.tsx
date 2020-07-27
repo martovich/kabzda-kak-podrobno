@@ -1,8 +1,8 @@
-import React, {useState,MouseEvent} from "react";
+import React, {useState} from "react";
 
-type UncontrolledRatingPropsType = {
-    value : 0 | 1 | 2 | 3 | 4 | 5
-}
+// type UncontrolledRatingPropsType = {
+//     value : 0 | 1 | 2 | 3 | 4 | 5
+// }
 
 type StarPropsType = {
     selected: boolean
