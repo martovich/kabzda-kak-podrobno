@@ -1,14 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 
 type UncontrolledOnOffPropsType = {
     isOn: boolean
     onClick: (on: boolean) => void
 }
 
-//Dimych version
 export function UncontrolledOnOff(props: UncontrolledOnOffPropsType) {
-
-    // let [on, setOn] = useState(false); //hook
 
     const onStyle = {
         border: "1px solid black",
