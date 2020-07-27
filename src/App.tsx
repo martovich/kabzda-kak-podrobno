@@ -19,7 +19,7 @@ function App() {
     return (
         <div className={"App"}>
             <PageTitle title={"This is APP"}/>
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
+            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={ () => { setAccordionCollapsed(!accordionCollapsed) }}/>
             {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Uncontrolled Menu"}/>
             {/*<UncontrolledAccordion titleValue={"Users"}/>*/}
