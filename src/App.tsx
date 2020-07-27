@@ -1,33 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-
+import {UncontrolledRating2} from "./components/UncontrolledRating/UncontrolledRating2";
 
 type PageTitlePropsType = {
     title: string
 }
 
 function App() {
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     return (
-        <div>
-            {/*<PageTitle title={"This is APP"}/>*/}
-            {/*<Rating value={3}/>*/}
-            <UncontrolledAccordion titleValue={"Menu"}/>
-            <UncontrolledAccordion titleValue={"Users"}/>
-            {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
+        <div className={"App"}>
+            <PageTitle title={"This is APP"}/>
+            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
             {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
+            <UncontrolledAccordion titleValue={"Uncontrolled Menu"}/>
+            {/*<UncontrolledAccordion titleValue={"Users"}/>*/}
             <UncontrolledRating />
-            {/*<Rating value={0}/>*/}
+            <UncontrolledRating2 />
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
-            <OnOff isOn={true} />
+            {/*<OnOff isOn={true} />*/}
             <OnOff isOn={true} />
             {/*<OnOff title={"On"} color={"green"}/>*/}
             {/*<OnOff title={"Off"} color={"red"}/>*/}
