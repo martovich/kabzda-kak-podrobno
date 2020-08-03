@@ -16,6 +16,7 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [on,setOn] = useState<boolean>(false);
+    let [switchOn,setSwitchOn] = useState<boolean>(false);
     return (
         <div className={"App"}>
             <PageTitle title={"This is APP"}/>
@@ -32,8 +33,9 @@ function App() {
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
             {/*<OnOff isOn={true} />*/}
-            <OnOff isOn={true}/>
-            <UncontrolledOnOff isOn={on} onClick={setOn}/>
+            {/*<OnOff on={switchOn} onChange={ (on) => { setSwitchOn(on) }}/>*/}
+            <OnOff on={switchOn} onChange={ setSwitchOn }/>
+            <UncontrolledOnOff onChange={ setOn }/> {on.toString()}
             {/*<OnOff title={"On"} color={"green"}/>*/}
             {/*<OnOff title={"Off"} color={"red"}/>*/}
         </div>
