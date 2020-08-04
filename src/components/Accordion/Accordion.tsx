@@ -13,7 +13,7 @@ type AccordionBodyPropsType = {
     value: number
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
     return (
         <div>
             <AccordionTitle title={props.titleValue} onClick={props.onClick}/>
@@ -23,7 +23,10 @@ function Accordion(props: AccordionPropsType) {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    return <h3 onClick={props.onClick}>
+    // return <h3 onClick={props.onClick}>
+    //     -- {props.title} --
+    // </h3>
+    return <h3 onClick={ () => props.onClick() }>
         -- {props.title} --
     </h3>
 }
@@ -36,5 +39,3 @@ function AccordionBody(props: AccordionBodyPropsType) {
             <li>{props.value} + 2</li>
         </ul>)
 }
-
-export default Accordion
